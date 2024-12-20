@@ -57,11 +57,11 @@ class LoginScreen extends StatelessWidget {
                 // Hardcoded credentials validation
                 if (emailController.text == 'Admin' &&
                     passwordController.text == 'Admin') {
-                  Navigator.pushReplacementNamed(context, '/home');
+                  Navigator.pushReplacementNamed(context, '/dashboard');
                 } else {
                   // Show an error message
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
+                    const SnackBar(
                       content: Text('Invalid Credentials'),
                       backgroundColor: Colors.red,
                     ),
