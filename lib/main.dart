@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app_project/views/dashboard.dart';
 import 'package:travel_app_project/views/onboarding_screen.dart';
 import 'package:travel_app_project/views/splash_screen.dart';
 import 'package:travel_app_project/views/login_screen.dart';
@@ -19,10 +20,12 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(), // Splash Screen
-        '/onboarding': (context) => const OnboardingScreen(), // Onboarding Screen
+        '/onboarding': (context) =>
+            const OnboardingScreen(), // Onboarding Screen
         '/login': (context) => LoginScreen(), // Login Screen
         '/signup': (context) => SignUpScreen(), // Sign-Up Screen
-        '/home': (context) => HomeScreen(), // Placeholder for Home/Dashboard Screen
+        '/dashboard': (context) =>
+            const Dashboard(), // Placeholder for Home/Dashboard Screen
       },
     );
   }
