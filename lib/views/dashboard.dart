@@ -13,17 +13,17 @@ class Dashboard extends StatelessWidget {
           padding: EdgeInsets.all(8.0),
           child: CircleAvatar(
             backgroundImage: AssetImage(
-                'assets/images/phewa.jpeg'), // Replace with your image
+                'assets/images/ikka.jpeg'), // Replace with your image
           ),
         ),
         title: const Text(
-          'Ram',
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          'IKKA',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.notifications, color: Colors.black),
+            icon: const Icon(Icons.notifications, color: Colors.white),
           ),
         ],
       ),
@@ -36,7 +36,7 @@ class Dashboard extends StatelessWidget {
               "Explore the Beautiful world!",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 25),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -53,7 +53,7 @@ class Dashboard extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 25),
             Expanded(
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -67,12 +67,19 @@ class Dashboard extends StatelessWidget {
                     userCount: 50,
                   ),
                   buildCard(
-                    image: 'assets/destination2.jpg',
-                    title: 'Destination 2',
-                    location: 'Somewhere',
+                    image: 'assets/images/mustang.jpeg',
+                    title: 'Mustang',
+                    location: 'Mustang',
                     rating: 4.5,
                     userCount: 30,
                   ),
+                  buildCard(
+                    image: 'assets/images/Chitwan.jpg',
+                    title: 'Chitwan Natonal Park',
+                    location: 'Chitwan',
+                    rating: 4.5,
+                    userCount: 30,
+                  )
                 ],
               ),
             ),
@@ -121,61 +128,67 @@ class Dashboard extends StatelessWidget {
     required int userCount,
   }) {
     return Container(
-      margin: EdgeInsets.only(right: 16),
+      margin: const EdgeInsets.only(right: 16),
       width: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         image: DecorationImage(
           image: AssetImage(image),
-          fit: BoxFit.cover,
+          fit: BoxFit.cover, // Ensures the image scales properly
         ),
       ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
+      child: Container(
+        padding: const EdgeInsets.all(8.0),
+        decoration: BoxDecoration(
+          // ignore: deprecated_member_use
+          color: Colors.black.withOpacity(0.5), // Background overlay for text
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
               title,
-              style: TextStyle(
-                  color: Colors.blue,
+              style: const TextStyle(
+                  color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.bold),
             ),
-          ),
-          Row(
-            children: [
-              Icon(Icons.location_on, color: Colors.blue, size: 16),
-              Text(
-                location,
-                style: TextStyle(color: Colors.white, fontSize: 14),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              Icon(Icons.star, color: Colors.yellow, size: 16),
-              Text(
-                rating.toString(),
-                style: TextStyle(color: Colors.white),
-              ),
-              Spacer(),
-              CircleAvatar(
-                radius: 12,
-                backgroundImage: AssetImage('assets/user1.jpg'), // User avatars
-              ),
-              CircleAvatar(
-                radius: 12,
-                backgroundImage: AssetImage('assets/user2.jpg'),
-              ),
-              Text(
-                "+$userCount",
-                style: TextStyle(color: Colors.white),
-              ),
-            ],
-          ),
-        ],
+            Row(
+              children: [
+                const Icon(Icons.location_on, color: Colors.white, size: 16),
+                Text(
+                  location,
+                  style: const TextStyle(color: Colors.white, fontSize: 14),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                const Icon(Icons.star, color: Colors.yellow, size: 16),
+                Text(
+                  rating.toString(),
+                  style: const TextStyle(color: Colors.white),
+                ),
+                const Spacer(),
+                const CircleAvatar(
+                  radius: 12,
+                  backgroundImage:
+                      AssetImage('assets/images/ikka.jpeg'), // User avatars
+                ),
+                const CircleAvatar(
+                  radius: 12,
+                  backgroundImage: AssetImage('assets/images/ikka.jpeg'),
+                ),
+                Text(
+                  "+$userCount",
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
