@@ -1,0 +1,64 @@
+Day 1: Project Setup & Environment Configuration 
+1.	Create ER Diagram for the project and initialize the project with npm and set up a Git repository
+2.	Install and configure Express.js, MongoDB, and other necessary packages like mongoose, and nodemon
+3.	Set up the folder structure (for example: models, routes, controllers)
+4.	Configure database connection using Mongoose and set up environment variables
+
+Day 2: User Authentication 
+1.	Design user schema (name, email, password, role): 
+2.	Implement JWT-based authentication (sign-up, login, logout)
+3.	Add password hashing with bcrypt
+4.	Test authentication endpoints using Postman
+
+Day 3: Venue Management 
+1.	Design venue schema (name, location, price, capacity, availability)
+2.	Implement CRUD operations for venues (create, read, update, delete)
+3.	Set up file upload functionality for venue images
+4.	Test CRUD and upload APIs: 1 hour
+
+Day 4: Booking Management
+1.	Design booking schema (user, venue, date, time slot, status)
+2.	Implement booking endpoints (create booking, get user bookings, cancel bookings)
+3.	Add validation to check venue availability before booking
+4.	Test all booking-related endpoints
+
+Day 5: Payment Integration (8 hours)
+1.	Set up a payment gateway (e.g., esewa and khalti) = for now paypal 
+2.	Create payment API for booking payments
+(not completely correct)= on hold
+
+
+Day 6: Admin Panel APIs 
+1.	Design admin-specific endpoints for managing users and venues= (venues already done at day 2 and 3, customer refined today)
+2.	Implement APIs for admin tasks (approve/reject venues, monitor bookings)= done in 2-3 days
+3.	Add middleware for role-based access control (admin/user)= done
+4.	Test admin APIs: done
+
+
+Day 7: Notifications & Logs
+1.	Set up email notifications
+2.	Send confirmation emails for bookings and cancellations (for now only for bookings)
+3.	Test email and logging functionalities
+
+
+Day 8: API Optimization & Documentation 
+1.	Optimize database queries and API response times
+2.	Finalize and test the backend
+3.	Write API Documentation
+
+Day 9: Testing & Debugging 
+1.	Write unit tests for critical backend functions
+2.	Write integration tests for API endpoints
+3.	Debug and fix any issues found during testing
+
+Day 10: Code Optimization & Final Refinement
+1.	Review and refactor code for readability, performance, and maintainability: 
+2.	Ensure API response consistency (For example: proper error handling, status codes)
+3.	Optimize database queries for better performance
+4.	Conduct a final review and finalize the backend for frontend integration
+
+
+
+
+
+
