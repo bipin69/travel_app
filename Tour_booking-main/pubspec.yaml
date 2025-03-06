@@ -1,0 +1,69 @@
+name: hotel_booking
+description: "A new Flutter project."
+publish_to: 'none' # This specifies that the package is private and won't be published.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4 # Ensure the correct Flutter SDK version.
+
+dependencies:
+  flutter:
+    sdk: flutter
+  introduction_screen: ^3.1.14 # A dependency for introduction screens.
+  cupertino_icons: ^1.0.8 # Provides Cupertino icons for iOS-style widgets.
+  bloc: ^8.1.4
+  get_it: ^8.0.3
+  dio: ^5.7.0
+  hive_flutter: ^1.1.0
+  pretty_dio_logger: ^1.4.0
+  shared_preferences: ^2.3.4
+  multi_select_flutter: ^4.1.3
+  uuid: ^4.5.1
+  dartz: ^0.10.1
+  path_provider: ^2.1.5
+  equatable: ^2.0.7
+  image_picker: ^1.1.2
+  awesome_dio_interceptor: ^1.3.0
+  json_annotation: ^4.9.0
+  connectivity_plus: ^6.1.1
+  permission_handler: ^11.3.1
+  json_serializable: ^6.9.0
+  flutter_bloc: ^8.1.6
+  font_awesome_flutter: ^10.8.0
+  smooth_page_indicator: ^1.2.0+3
+  icons_plus: ^5.0.0
+  emojis: ^0.9.9
+  http: ^1.3.0
+  jwt_decoder: ^2.0.1
+  carousel_slider: ^5.0.0
+  intl: ^0.20.2
+  sensors_plus: ^6.1.1
+  proximity_sensor: ^1.3.7
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter # Testing framework.
+  flutter_lints: ^4.0.0 # Linting rules to maintain code quality.
+  build_runner: ^2.4.14
+  hive_generator: ^2.0.1
+  mocktail: ^1.0.4
+  bloc_test: ^9.1.7
+  test_cov_console: ^0.2.2
+  coverage: ^1.11.1
+
+flutter:
+  uses-material-design: true # Use Material Design widgets and themes.
+
+  # Asset declaration
+  assets:
+    - assets/images/ # Include all images inside the assets/images folder.
+    - assets/icons/ # Include all images inside the assets/icons folder.
+
+  # Font declaration
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Regular.ttf # Ensure the font file exists in the assets/fonts directory.
+    
